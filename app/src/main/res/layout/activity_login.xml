@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingRight="16dp"
+    android:paddingLeft="16dp"
+    tools:context="com.example.info.skjj.activity.LoginActivity">
+
+    <!--안드로이드 텍스트뷰에 특수문자 넣는 방법
+        http://al02000.tistory.com/4 참조
+    -->
+
+    <TextView
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="50dp"
+        android:id="@+id/tv_logo"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:text="TxT \u0026 Video Chat"
+        android:textSize="40sp"
+        android:gravity="center"
+        />
+
+
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/id_layout"
+        android:layout_below="@+id/tv_logo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="@color/colorPrimaryDark"
+        >
+
+        <EditText
+            android:inputType="textEmailAddress"
+            android:id="@+id/et_input_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_margin="16dp"
+            android:hint="이메일" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/password_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/id_layout"
+        android:textColorHint="@color/colorPrimaryDark"
+        >
+
+        <EditText
+            android:id="@+id/et_input_pw"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:textColor="@color/colorPrimaryDark"
+            android:inputType="textPassword"
+            android:hint="비밀번호"
+            />
+    </android.support.design.widget.TextInputLayout>
+    <View
+        android:id="@+id/v_line1"
+        android:layout_below="@+id/password_layout"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/colorLightGray"
+        />
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/v_line1"
+        android:background="@color/colorPrimary"
+        android:text="로그인"
+        android:textStyle="bold"
+        android:textColor="@android:color/black" />
+    <View
+        android:id="@+id/v_line2"
+        android:layout_below="@+id/btn_login"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/colorLightGray"
+        />
+    <Button
+        android:id="@+id/btn_join"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/v_line2"
+        android:background="@color/colorPrimary"
+        android:text="회원가입"
+        android:textStyle="bold"
+        android:textColor="@android:color/black" />
+    <View
+        android:layout_below="@+id/btn_join"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/colorLightGray"
+        />
+
+
+</RelativeLayout>
